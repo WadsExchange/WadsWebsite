@@ -1,27 +1,31 @@
+@import '../../../media-breakpoint.scss';
+
 .card-holder {
     height: 100%;
     margin-bottom: 2rem;
-    display: flex;
-    flex-flow: row;
+    display: grid;
+    grid-gap: 2rem;
+    grid-template-rows: auto;
+    grid-template-columns: auto;
+    justify-content: stretch;
 }
 
 .card-holder:last-of-type {
     margin-bottom: 0rem;
 }
 
-mat-card:first-child {
+/*mat-card:first-child {
     margin-left: 0rem;
 }
 
 mat-card:last-child {
     margin-right: 0rem;
-}
+}*/
 
 mat-card {
     height: 100%;
-    margin: 0rem 1rem;
 
-    flex: 1 1 auto;
+    grid-column: span 1;
 
     h1 {
         text-align: center;
@@ -29,12 +33,96 @@ mat-card {
 }
 
 mat-toolbar {
-    margin-bottom: 1rem;
     padding: 0px;
+    grid-column: span 1;
 
     h1 {
         width: 100%;
         text-align: center;
         font-size: 2em;
+    }
+}
+
+#team {
+    height: 100% * 5;
+    grid-template-rows: max-content auto;
+    
+    @include media-breakpoint-up(sm) {
+        grid-template-columns: 1fr 1fr;
+        height: 100% * 3;
+        mat-toolbar {
+            grid-column: span 2;
+        }
+    }
+
+    @include media-breakpoint-up(md) {
+        grid-template-columns: 1fr 1fr 1fr;
+        height: 100% * 2;
+        mat-toolbar {
+            grid-column: span 3;
+        }
+    }
+
+    @include media-breakpoint-up(lg) {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        height: 100% * 2;
+        mat-toolbar {
+            grid-column: span 4;
+        }
+    }
+
+    @include media-breakpoint-up(xl) {
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        height: 100%;
+        mat-toolbar {
+            grid-column: span 5;
+        }
+    }
+}
+
+#advisors {
+    height: 100% * 2;
+    grid-template-rows: max-content auto;
+
+    @include media-breakpoint-up(sm) {
+        height: 100%;
+        grid-template-columns: 1fr 1fr;
+        mat-toolbar {
+            grid-column: span 2;
+        }
+    }
+}
+
+#info {
+    height: 100% * 3;
+
+    @include media-breakpoint-up(md) {
+        height: 100%;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+#header {
+    mat-card {
+        opacity: 0.8;
+
+        h1 {
+            text-align: left;
+            opacity: 1;
+        }
+    }
+
+    @include media-breakpoint-up(sm) {
+        grid-template-columns: 1fr 1fr;
+        mat-card {
+            grid-column: 2 / span 1;
+        }
+    }
+
+    @include media-breakpoint-up(md) {
+        grid-template-columns: 1fr 1fr 1fr;
+        mat-card {
+            grid-column: 3 / span 1;
+        }
     }
 }
