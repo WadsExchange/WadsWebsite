@@ -1,0 +1,40 @@
+.card-holder {
+    height: 100%;
+    margin-bottom: 2rem;
+    display: flex;
+    flex-flow: row;
+}
+
+.card-holder:last-of-type {
+    margin-bottom: 0rem;
+}
+
+mat-card:first-child {
+    margin-left: 0rem;
+}
+
+mat-card:last-child {
+    margin-right: 0rem;
+}
+
+mat-card {
+    height: 100%;
+    margin: 0rem 1rem;
+
+    flex: 1 1 auto;
+
+    h1 {
+        text-align: center;
+    }
+}
+
+mat-toolbar {
+    margin-bottom: 1rem;
+    padding: 0px;
+
+    h1 {
+        width: 100%;
+        text-align: center;
+        font-size: 2em;
+    }
+}

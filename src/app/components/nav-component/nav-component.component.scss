@@ -1,0 +1,34 @@
+.wrapper, mat-sidenav-container, mat-sidenav-content {
+    height: 100%;
+    width: 100%;
+}
+
+.wrapper {
+    display: flex;
+    flex-flow: column;
+
+    mat-toolbar {
+        flex: 0 0 auto;
+    }
+    mat-sidenav-container {
+        flex: 1 1 auto;
+    }
+}
+
+mat-sidenav-content {
+    padding: 2rem;
+
+    background-image: url("../../../assets/logo.png");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+mat-sidenav {
+    width: 81.52173913043478%;
+
+    @media screen and (min-width: 368px) {
+        width: 300px;
+    }
+}

@@ -19,7 +19,7 @@ $wads-accent: mat-palette($mat-pink, A200, A100, A400);
 $wads-warn: mat-palette($mat-red);
 
 // Create the theme object (a Sass map containing all of the palettes).
-$wads-theme: mat-light-theme($wads-primary, $wads-accent, $wads-warn);
+$wads-theme: mat-dark-theme($wads-primary, $wads-accent, $wads-warn);
 
 // Include theme styles for core and each component used in your app.
 // Alternatively, you can import and @include the theme mixins for each component
@@ -27,6 +27,14 @@ $wads-theme: mat-light-theme($wads-primary, $wads-accent, $wads-warn);
 @include angular-material-theme($wads-theme);
 
 /* You can add global styles to this file, and also import other style files */
+* {
+    box-sizing: border-box;
+}
+html, body { 
+    height: 100%;
+    width: 100%;
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+    margin: 0%;
+    padding: 0%;
+}
+body { font-family: Roboto, "Helvetica Neue", sans-serif; }
