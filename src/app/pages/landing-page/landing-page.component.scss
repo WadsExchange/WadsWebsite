@@ -1,17 +1,12 @@
 @import '../../../media-breakpoint.scss';
 
 .card-holder {
-    height: 100%;
     margin-bottom: 2rem;
     display: grid;
     grid-gap: 2rem;
-    grid-template-rows: auto;
+    grid-template-rows: max-content;
     grid-template-columns: auto;
     justify-content: stretch;
-}
-
-.card-holder:last-of-type {
-    margin-bottom: 0rem;
 }
 
 mat-card {
@@ -27,7 +22,7 @@ mat-card {
         text-align: center;
         flex: 0 0 auto;
 
-        img {
+        img.profile-image {
             display: inline-block;
             margin: auto;
             border-radius: 50%;
@@ -37,24 +32,14 @@ mat-card {
 
     mat-card-content {
         flex: 1 1 auto;
-        
-        p {
-            overflow: hidden;
-            text-overflow: ellipsis;
-            max-height: 68px;
-
-            @include media-breakpoint-between(sm, md) {
-                max-height: 34px;
-            }
-
-            @include media-breakpoint-only(lg) {
-                max-height: 51px;
-            }
-        }
     }
 
     mat-card-actions {
         flex: 0 0 auto;
+        text-align: center;
+        h1 button {
+            font-size: 1em;
+        }
     }
 }
 
@@ -70,12 +55,10 @@ mat-toolbar {
 }
 
 #team {
-    height: 100% * 5;
-    grid-template-rows: max-content auto;
+    grid-template-rows: max-content max-content;
     
     @include media-breakpoint-up(sm) {
         grid-template-columns: 1fr 1fr;
-        height: 100% * 3;
         mat-toolbar {
             grid-column: span 2;
         }
@@ -83,7 +66,6 @@ mat-toolbar {
 
     @include media-breakpoint-up(md) {
         grid-template-columns: 1fr 1fr 1fr;
-        height: 100% * 2;
         mat-toolbar {
             grid-column: span 3;
         }
@@ -91,7 +73,6 @@ mat-toolbar {
 
     @include media-breakpoint-up(lg) {
         grid-template-columns: 1fr 1fr 1fr 1fr;
-        height: 100% * 2;
         mat-toolbar {
             grid-column: span 4;
         }
@@ -99,7 +80,6 @@ mat-toolbar {
 
     @include media-breakpoint-up(xl) {
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-        height: 100%;
         mat-toolbar {
             grid-column: span 5;
         }
@@ -107,11 +87,9 @@ mat-toolbar {
 }
 
 #advisors {
-    height: 100% * 2;
-    grid-template-rows: max-content auto;
+    grid-template-rows: max-content max-content;
 
     @include media-breakpoint-up(sm) {
-        height: 100%;
         grid-template-columns: 1fr 1fr;
         mat-toolbar {
             grid-column: span 2;
@@ -120,19 +98,17 @@ mat-toolbar {
 }
 
 #info {
-    height: 100% * 3;
-
     @include media-breakpoint-up(md) {
-        height: 100%;
         grid-template-columns: 1fr 1fr 1fr;
     }
 }
 
 #header {
+    height: 100%;
+    grid-template-rows: 100%;
+
     mat-card {
-        h1 {
-            text-align: left;
-        }
+        height: 100%;
     }
 
     @include media-breakpoint-up(sm) {
@@ -150,8 +126,12 @@ mat-toolbar {
     }
 }
 
-img#logo {
-    border-radius: none;
-    border: none;
+form {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+}
+
+mat-form-field {
     width: 100%;
 }

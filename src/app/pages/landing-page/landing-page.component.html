@@ -1,47 +1,61 @@
 <div id="header" class="card-holder">
     <mat-card>
         <mat-card-title-group>
-            <img mat-card-lg-image id="logo" src="../../../assets/logo2.svg" alt="Wads logo">
+            <img mat-card-image src="../../../assets/logo2.svg" alt="Wads logo">
         </mat-card-title-group>
         <mat-card-title-group>
             <mat-card-title>Exchange Crypto for a Single Use Virtual Credit Card</mat-card-title>
         </mat-card-title-group>
+        <mat-card-content>
+
+        </mat-card-content>
+        <mat-card-actions>
+            <h1><button mat-raised-button color="accent">Live Demo</button></h1>
+        </mat-card-actions>
     </mat-card>
 </div>
 
 <div id="info" class="card-holder">
     <mat-card>
-      <mat-card-content>
-        <h1>
-            Use Anywhere
-        </h1>
-      </mat-card-content>
+        <mat-card-title-group>
+            <img mat-card-image src="../../../assets/world.svg" alt="world">
+        </mat-card-title-group>
+        <mat-card-title-group>
+            <mat-card-title>Use Anywhere</mat-card-title>
+            <mat-card-subtitle>Cryptocurrency is global and we will issue you a card that works where you need it.</mat-card-subtitle>
+        </mat-card-title-group>
     </mat-card>
 
     <mat-card>
-      <mat-card-content>
-          <h1>
-              Save Money
-          </h1>
-      </mat-card-content>
+        <mat-card-title-group>
+            <img mat-card-image src="../../../assets/money_card.svg" alt="money">
+        </mat-card-title-group>
+        <mat-card-title-group>
+            <mat-card-title>Save Money</mat-card-title>
+            <mat-card-subtitle>Skip the high exchange fees and access the full value of your Crypto.</mat-card-subtitle>
+        </mat-card-title-group>
     </mat-card>
 
     <mat-card>
-      <mat-card-content>
-          <h1>
-              Fast Issuance
-          </h1>
-      </mat-card-content>
+        <mat-card-title-group>
+            <img mat-card-image src="../../../assets/time.svg" alt="time">
+        </mat-card-title-group>
+        <mat-card-title-group>
+            <mat-card-title>Fast Issuance</mat-card-title>
+            <mat-card-subtitle>Your card is issued as soon as we verify the transaction with automatic verification on small amounts.</mat-card-subtitle>
+        </mat-card-title-group>
     </mat-card>
 </div>
 
 <div class="card-holder">
     <mat-card>
-      <mat-card-content>
-        <h1>
-            How It Works
-        </h1>
-      </mat-card-content>
+        <mat-card-header>
+            <mat-card-title>
+                How It Works
+            </mat-card-title>
+        </mat-card-header>
+      
+        <img mat-card-image src="../../../assets/background.png" alt="how it works">
     </mat-card>
 </div>
 
@@ -54,7 +68,7 @@
 
     <mat-card>
         <mat-card-title-group>
-            <img mat-card-lg-image src="../../../assets/atif.jpg">
+            <img mat-card-lg-image class="profile-image" src="../../../assets/atif.jpg">
         </mat-card-title-group>
         <mat-card-title-group>
             <mat-card-title>Atif Farid Mohammad PhD</mat-card-title>
@@ -69,7 +83,7 @@
 
     <mat-card>
         <mat-card-title-group>
-            <img mat-card-lg-image src="../../../assets/chris.jpg">
+            <img mat-card-lg-image class="profile-image" src="../../../assets/chris.jpg">
         </mat-card-title-group>
         <mat-card-title-group>
             <mat-card-title>Chris Elmore</mat-card-title>
@@ -92,7 +106,7 @@
 
     <mat-card>
             <mat-card-title-group>
-                    <img mat-card-lg-image src="../../../assets/jonathan.jpg">
+                    <img mat-card-lg-image class="profile-image" src="../../../assets/jonathan.jpg">
                 </mat-card-title-group>
                 <mat-card-title-group>
                     <mat-card-title>Jonathan Byrne</mat-card-title>
@@ -107,7 +121,7 @@
 
     <mat-card>
             <mat-card-title-group>
-                    <img mat-card-lg-image src="../../../assets/liam.jpg">
+                    <img mat-card-lg-image class="profile-image" src="../../../assets/liam.jpg">
                 </mat-card-title-group>
                 <mat-card-title-group>
                     <mat-card-title>Liam Byrne</mat-card-title>
@@ -122,7 +136,7 @@
 
     <mat-card>
         <mat-card-title-group>
-            <img mat-card-lg-image src="">
+            <img mat-card-lg-image class="profile-image" src="../../../assets/blank.png">
         </mat-card-title-group>
         <mat-card-title-group>
             <mat-card-title>Loi Phung</mat-card-title>
@@ -137,7 +151,7 @@
   
       <mat-card>
             <mat-card-title-group>
-                    <img mat-card-lg-image src="../../../assets/lukas.jpg">
+                    <img mat-card-lg-image class="profile-image" src="../../../assets/lukas.jpg">
                 </mat-card-title-group>
                 <mat-card-title-group>
                     <mat-card-title>Lukas Gupta-Leary</mat-card-title>
@@ -152,7 +166,7 @@
 
       <mat-card>
             <mat-card-title-group>
-                    <img mat-card-lg-image src="">
+                    <img mat-card-lg-image class="profile-image" src="../../../assets/blank.png">
                 </mat-card-title-group>
                 <mat-card-title-group>
                     <mat-card-title>Luke Deviney</mat-card-title>
@@ -168,10 +182,23 @@
 
 <div class="card-holder">
     <mat-card>
-      <mat-card-content>
-        <h1>
-            Get Notified
-        </h1>
-      </mat-card-content>
+        <mat-card-header>
+            <mat-card-title>
+                Get Notified
+            </mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+            <form>
+                <mat-form-field>
+                    <input matInput placeholder="Email" [formControl]="emailFormControl" [errorStateMatcher]="matcher">
+                    <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
+                    Please enter a valid email address
+                    </mat-error>
+                    <mat-error *ngIf="emailFormControl.hasError('required')">
+                    Email is <strong>required</strong>
+                    </mat-error>
+                </mat-form-field>
+            </form>
+        </mat-card-content>
     </mat-card>
 </div>

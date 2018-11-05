@@ -33,11 +33,11 @@ mat-sidenav-container {
 mat-sidenav-content {
     padding: 2rem;
 
-    background-image: url("../../../assets/logo.svg");
+    /*background-image: url("../../../assets/logo.svg");
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: contain;*/
 }
 
 mat-sidenav {
@@ -46,4 +46,12 @@ mat-sidenav {
     @media screen and (min-width: 368px) {
         width: 300px;
     }
+}
+
+.spacer {
+    flex: 1 1 auto;
+}
+
+img {
+    height: 100%;
 }

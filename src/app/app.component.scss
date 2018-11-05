@@ -5,3 +5,14 @@ nav-component {
     left: 0px;
     right: 0px;
 }
+
+mat-toolbar {
+    margin-left: -2rem;
+    margin-bottom: -2rem;
+    width: calc(100% + 4rem);
+    text-align: center;
+
+    span {
+        width: 100%;
+    }
+}
