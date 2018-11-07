@@ -1,3 +1,5 @@
+@import '~@angular/material/theming';
+
 .wrapper {
     position: absolute;
     top: 0px;
@@ -11,6 +13,7 @@
     mat-toolbar {
         flex: 0 0 auto;
     }
+    
     mat-sidenav-container {
         flex: 1 1 auto;
     }
@@ -22,22 +25,8 @@ mat-sidenav-container, mat-sidenav-content {
     max-height: 100%;
 }
 
-mat-sidenav-container {
-    background-image: url("../../../assets/Ethereum-bg-02.jpg");
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
 mat-sidenav-content {
     padding: 2rem;
-
-    /*background-image: url("../../../assets/logo.svg");
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;*/
 }
 
 mat-sidenav {

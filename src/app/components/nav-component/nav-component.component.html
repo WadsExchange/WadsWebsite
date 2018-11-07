@@ -1,16 +1,16 @@
 <div class="wrapper">
-    <mat-toolbar class="mat-elevation-z16" color="primary">
-      <button mat-icon-button (click)="sidenav.toggle()"><mat-icon>menu</mat-icon></button>
+    <mat-toolbar color="primary">
       <img src="../../../assets/logo.svg" alt="Wads">
       <span class="spacer"></span>
-      <button mat-raised-button color="accent">Chrome Extension Comeing Soon</button>
+      <button mat-raised-button color="accent">Live Demo</button>
+      <button mat-icon-button (click)="sidenav.toggle()"><mat-icon>menu</mat-icon></button>
     </mat-toolbar>
     <mat-sidenav-container>
-      <mat-sidenav #sidenav></mat-sidenav>
       <mat-sidenav-content>
         <ng-content>
     
         </ng-content>
       </mat-sidenav-content>
+      <mat-sidenav position="end" #sidenav></mat-sidenav>
     </mat-sidenav-container>
 </div>
