@@ -41,6 +41,15 @@ mat-sidenav {
     flex: 1 1 auto;
 }
 
-img {
+button.main-logo {
+    background: none;
+    margin: 0px;
+    padding: 0px;
     height: 100%;
+    border: none;
+    outline: none;
+
+    img {
+        height: 100%;
+    }
 }
