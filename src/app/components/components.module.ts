@@ -4,12 +4,15 @@ import { NavComponentComponent } from './nav-component/nav-component.component';
 
 import { MaterialModulesModule } from '../material-modules/material-modules.module';
 
+import { ScrollToModule } from '@nicky-lenaers/ngx-scroll-to';
+
 
 @NgModule({
   declarations: [NavComponentComponent],
   imports: [
     CommonModule,
-    MaterialModulesModule
+    MaterialModulesModule,
+    ScrollToModule.forRoot()
   ],
   exports: [
     NavComponentComponent

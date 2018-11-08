@@ -6,8 +6,10 @@ import { LandingPageComponent } from './landing-page/landing-page.component';
 
 import { MaterialModulesModule } from '../material-modules/material-modules.module';
 
-import {HttpClientModule} from '@angular/common/http';
-import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
+import { ScrollToModule } from '@nicky-lenaers/ngx-scroll-to';
 
 @NgModule({
   declarations: [LandingPageComponent],
@@ -17,7 +19,8 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
     MaterialModulesModule,
     HttpClientModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    ScrollToModule.forRoot()
   ]
 })
 export class PagesModule { }

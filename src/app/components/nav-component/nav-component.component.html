@@ -2,7 +2,7 @@
     <mat-toolbar color="primary">
       <img src="../../../assets/logo.svg" alt="Wads">
       <span class="spacer"></span>
-      <button mat-raised-button color="accent">Live Demo</button>
+      <button mat-raised-button matTooltip="Coming Soon!" color="accent">Chrome Extension</button>
       <button mat-icon-button (click)="sidenav.toggle()"><mat-icon>menu</mat-icon></button>
     </mat-toolbar>
     <mat-sidenav-container>
@@ -11,6 +11,14 @@
     
         </ng-content>
       </mat-sidenav-content>
-      <mat-sidenav position="end" #sidenav></mat-sidenav>
+      <mat-sidenav position="end" #sidenav>
+        <mat-action-list>
+          <button mat-list-item (click)="sidenav.toggle()" [ngx-scroll-to]="'#info'" [ngx-scroll-to-offset]="-24">Learn More</button>
+          <button mat-list-item (click)="sidenav.toggle()" [ngx-scroll-to]="'#howto'" [ngx-scroll-to-offset]="-24">How it Works</button>
+          <button mat-list-item (click)="sidenav.toggle()" [ngx-scroll-to]="'#advisors'">Advisors</button>
+          <button mat-list-item (click)="sidenav.toggle()" [ngx-scroll-to]="'#team'">The Team</button>
+          <button mat-list-item (click)="sidenav.toggle()" [ngx-scroll-to]="'#notify'" [ngx-scroll-to-offset]="-24">Get Notified</button>
+        </mat-action-list>
+      </mat-sidenav>
     </mat-sidenav-container>
 </div>

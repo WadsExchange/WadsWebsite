@@ -14,7 +14,6 @@
 mat-card {
     height: auto;
     max-height: auto;
-    // background-color: rgba(48, 48, 48, 0.95);
     display: flex;
     flex-flow: column;
 
@@ -162,6 +161,19 @@ mat-toolbar {
     }
 }
 
+#howto {
+    min-height: 100%;
+    grid-template-rows: auto;
+    overflow: visible;
+
+    mat-card {
+        background-image: url('../../../assets/circled.svg');
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+}
+
 form {
     min-width: 150px;
     width: 100%;
@@ -173,4 +185,9 @@ mat-form-field {
 
 h3 {
     font-weight: 300;
+}
+
+.anchor {
+    position: relative;
+    top: -2rem;
 }
