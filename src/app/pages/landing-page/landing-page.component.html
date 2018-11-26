@@ -209,10 +209,10 @@
                 Get Notified
             </mat-card-title>
         </mat-card-title-group>
-        <mat-card-content matTooltip="Coming Soon!">
-            <form>
+        <mat-card-content>
+            <form #getNotified action="https://app.getresponse.com/add_subscriber.html" accept-charset="utf-8" method="post">
                 <mat-form-field>
-                    <input matInput placeholder="Email" [formControl]="emailFormControl" [errorStateMatcher]="matcher">
+                    <input matInput name="email" placeholder="Email" [formControl]="emailFormControl" [errorStateMatcher]="matcher">
                     <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
                     Please enter a valid email address
                     </mat-error>
@@ -220,10 +220,11 @@
                     Email is <strong>required</strong>
                     </mat-error>
                 </mat-form-field>
+                <input type="hidden" name="campaign_token" value="avJk1" />
             </form>
         </mat-card-content>
         <mat-card-actions>
-            <button mat-raised-button disabled>Submit</button>
+            <button (click)="getNotified.submit()" mat-raised-button>Submit</button>
         </mat-card-actions>
     </mat-card>
 </div>
